@@ -22,13 +22,13 @@ export const Search = ({}) => {
         <input
           type="search"
           id="default-search"
-          class="flex w-fit  p-4  text-sm text-gray-400 border border-gray-300 border-none bg-gray-50 focus:ring-gray-400 focus:border-gray-400 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gra-400 dark:focus:ring-gray-400 dark:focus:border-gray-400"
+          class="flex w-fit  p-2 text-sm text-gray-400 border border-gray-300 border-none bg-gray-50 focus:ring-gray-400 focus:border-gray-400 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gra-400 dark:focus:ring-gray-400 dark:focus:border-gray-400"
           placeholder="Search .."
           required
         />
         <button
           type="submit"
-          class="text-gray-400 absolute end-2.5 bottom-2.5 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-400 font-medium rounded-lg text-sm px-4 py-2  dark:hover:bg-gray-400 dark:focus:ring-gray-400"
+          class="text-gray-400 absolute  end-2.5 bottom-2.5 hover:bg-gray-600 focus:ring-2 focus:outline-none focus:ring-gray-400 font-medium rounded-xl text-sm mx-2 wid dark:hover:bg-gray-400 dark:focus:ring-gray-400"
         >
           <Searchbtn />
         </button>
