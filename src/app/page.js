@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="m-0 p-0 box-border">
       <Header />
-      <Technology />
+      <Technology articles={articles} />
       <Trending articles={articles} />
     </div>
   );

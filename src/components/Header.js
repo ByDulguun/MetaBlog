@@ -5,7 +5,7 @@ import { Search } from "../assets/icon/Search";
 export const Header = ({}) => {
   return (
     <div className="w-screen h-fit">
-      <div className="flex justify-between p-5 align-baseline">
+      <div className="flex justify-between p-6 align-baseline">
         <div>
           <Metabloglogo />
         </div>
