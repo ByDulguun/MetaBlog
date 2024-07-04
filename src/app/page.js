@@ -1,4 +1,6 @@
 "use client";
+import { About } from "@/components/About";
+import { AllBlog } from "@/components/AllBlog";
 import { Header } from "@/components/Header";
 import { Technology } from "@/components/Technology";
 import { Trending } from "@/components/Trending";
@@ -29,6 +31,8 @@ export default function Home() {
       <Header />
       <Technology articles={articles} />
       <Trending articles={articles} />
+      <AllBlog articles={articles} />
+      <About />
     </div>
   );
 }
