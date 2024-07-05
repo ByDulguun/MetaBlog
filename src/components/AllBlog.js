@@ -34,8 +34,10 @@ export const AllBlog = () => {
   }, [perPage, category]);
 
   return (
-    <div className="flex flex-col gap-8 lg:w-[1100px] md:ml-[500px] py-8">
-      <h1 className="font-bold text-2xl text-center md:text-start md:ml-8 "> All Blog Post</h1>
+    <div className="flex flex-col gap-8 lg:w-[1200px] md:m-auto py-8">
+      <h1 className="font-bold text-2xl text-center md:text-start md:ml-8 ">
+        All Blog Post
+      </h1>
       <div>
         {categories.map((item) => (
           <button
@@ -51,7 +53,7 @@ export const AllBlog = () => {
         ))}
       </div>
 
-      <div className="w-full grid grid-cols-1 gap-[24px] mx-3 md:grid md:grid-cols-3 md:w-[1200px]">
+      <button className="w-full grid grid-cols-1 gap-[24px] mx-3 md:grid md:grid-cols-3 md:w-[1200px] md:justify-start ">
         {blogs.map((blog) => (
           <BlogCard
             key={blog.title}
@@ -59,9 +61,10 @@ export const AllBlog = () => {
             title={blog.title}
             date={blog.publish_at}
             tags={blog.tag_list}
+            readable_publish_date={blog.readable_publish_date}
           />
         ))}
-      </div>
+      </button>
       <button
         className="w-fit px-5 py-3 m-auto bg-[#fff] text white rounded-md border"
         onClick={handleLoadMore}
@@ -76,18 +79,23 @@ export const AllBlog = () => {
   );
 };
 
-const BlogCard = ({ image, title, date, tags }) => {
+const BlogCard = ({ image, title, date, tags, readable_publish_date }) => {
   return (
-    <div className="border p-4 flex flex-col gap-4 w-full rounded-md bg-white">
-      <img src={image} alt="image" className="aspect-[2/1] w-full rounded-md object-cover" />
-      <div className="py-2 flex flex-col gap-4">
-        <div className="flex gap-2 flex-wrap">
+    <div className="border p-4 flex flex-col gap-2 w-full relative rounded-md bg-white h-full md:grid md:text-left text-left">
+      <img
+        src={image}
+        alt="image"
+        className="aspect-[2/1] w-full rounded-md object-cover"
+      />
+      <div className="py-2 px-1 flex flex-col gap-4">
+        <div className="flex gap-2 flex-wrap ">
           {tags.map((tag) => (
             <BlogTag key={tag} tag={tag} />
           ))}
         </div>
         <h3 className="font-semibold text-2xl">{title}</h3>
         <p className="text-gray-500"> {date}</p>
+        <div className="md:flex md:justify-start">{readable_publish_date}</div>
       </div>
     </div>
   );
@@ -96,7 +104,7 @@ const BlogCard = ({ image, title, date, tags }) => {
 const BlogTag = ({ tag }) => {
   return (
     <div className="bg-[#4b6bfb0d] py-1 px-[10px] rounded-md">
-      <p className="text-[#4b6bfb] font-medium text-md capitalize"> {tag}</p>
+      <p className="text-[#4B6BFB] font-medium text-md capitalize"> {tag}</p>
     </div>
   );
 };

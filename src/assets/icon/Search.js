@@ -2,7 +2,7 @@ import { Searchbtn } from "./Searchbtn";
 
 export const Search = ({}) => {
   return (
-    <form class="w-30 ">
+    <form class="w-26 ">
       <label
         for="default-search"
         class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -20,14 +20,11 @@ export const Search = ({}) => {
         <input
           type="search"
           id="default-search"
-          class="flex w-fit  px-3 py-1 text-sm text-gray-400  border-gray-300 border-none bg-gray-50 focus:ring-gray-400 focus:border-gray-400 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gra-400 dark:focus:ring-gray-400 dark:focus:border-gray-400"
+          class="flex px-2 py-1 text-sm text-gray-400   bg-gray-50"
           placeholder="Search..."
           required
         />
-        <button
-          type="submit"
-          class="text-gray-400 absolute right-0 end-2.5 top-2 bottom-2.5 hover:bg-gray-600 focus:ring-2 focus:outline-none focus:ring-gray-400 font-medium rounded-xl text-sm mx-2 wid dark:hover:bg-gray-400 dark:focus:ring-gray-400"
-        >
+        <button type="submit" class="  w-[20px] h-[20px] bg-gray-50   mx-2   ">
           <Searchbtn />
         </button>
       </div>

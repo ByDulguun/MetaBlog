@@ -1,9 +1,9 @@
 export const TrendingCards = (props) => {
   return (
-    <div className="w-72 h-80 relative">
+    <div className="w-72  relative md:h-[320px] h-[320px]  ">
       <img
         src={props.image}
-        className="w-full h-full rounded-xl object-cover"
+        className="w-72 h-[320px] rounded-xl object-cover m   "
       />
       <div className="  absolute top-[164px] left-8 ">
         <div className="flex flex-wrap gap-2">

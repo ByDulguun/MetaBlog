@@ -4,8 +4,8 @@ import { Search } from "../assets/icon/Search";
 
 export const Header = ({}) => {
   return (
-    <div className="w-full h-full">
-      <div className="p-6 md:flex  items-baseline justify-evenly md:mx-[148px] ">
+    <div className="w-full h-fit mx-2">
+      <div className="p-6 md:flex  items-baseline justify-evenly md:mx-[168px] ">
         <div>
           <Metabloglogo />
         </div>
