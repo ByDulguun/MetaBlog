@@ -3,19 +3,16 @@ import { handleClientScriptLoad } from "next/script";
 import { useEffect, useState } from "react";
 import { BlogCard } from "./BlogCard";
 
-const categories = ["All", "React", "Javascript", "Python", "Node.js", "Html"];
-
-export const AllBlog = () => {
+export const AllBlogSwitch = () => {
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
-  const [Views, viewBlogs] = useState([]);
 
   const [category, setCategory] = useState("All");
-  const [perPage, setPerPage] = useState(9);
+  const [perPage, setPerPage] = useState(12);
 
   const handleCategory = (category) => {
     setCategory(category);
-    setPerPage(9);
+    setPerPage(12);
   };
 
   const handleLoadMore = () => {
@@ -32,7 +29,6 @@ export const AllBlog = () => {
     )
       .then((res) => res.json())
       .then((data) => setBlogs(data))
-      .then((data) => viewBlogs(data))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, [perPage, category]);
@@ -42,27 +38,6 @@ export const AllBlog = () => {
       <h1 className="font-bold text-2xl text-center md:text-start md:ml-8 ">
         All Blog Post
       </h1>
-
-      <div className="md:flex  w-full relative">
-        {categories.map((item) => (
-          <button
-            key={item}
-            className=" dark:bg-white mx-2 ml-8 text-base font-bold "
-            style={{
-              color: category === item ? "#D4A373" : "",
-            }}
-            onClick={() => handleCategory(item)}
-          >
-            {item}
-          </button>
-        ))}
-        <Link key={Views} href={`/blogs`}>
-          <p className="md:absolute md:right-0 text-[12px] text-[#495057] font-semibold cursor-pointer visible max-md:hidden  ">
-            View All
-          </p>
-        </Link>
-      </div>
-
       <button className="w-full grid grid-cols-1 gap-[24px] mx-3 md:grid md:grid-cols-3 md:w-[1200px] md:justify-start ">
         {blogs.map((blog) => (
           <Link key={blog.id} href={`/blogs/${blog.id}`}>

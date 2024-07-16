@@ -15,7 +15,10 @@ const getArticle = async () => {
   return articles;
 };
 
-export default function Home() {
+const { useParams } = require("next/navigation");
+
+const Home = () => {
+  const { id } = useParams();
   const [articles, setArticles] = useState([]);
 
   const getData = async () => {
@@ -35,4 +38,5 @@ export default function Home() {
       <About />
     </div>
   );
-}
+};
+export default Home;

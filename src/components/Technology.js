@@ -17,7 +17,7 @@ export const Technology = ({ articles }) => {
   };
 
   return (
-    <div className="w-screen overflow-hidden h-fit mb-48 mx-3  md:relative" >
+    <div className="w-screen overflow-hidden h-fit mb-48 mx-3  md:relative">
       <div
         className="w-[400%] rounded-xl flex duration-300 "
         style={{ transform: `translateX(-${carouselIndex * 25}%)` }}

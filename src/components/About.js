@@ -2,9 +2,14 @@ import { Facebook } from "@/assets/icon/Facebook";
 import { Instagram } from "@/assets/icon/Instagram";
 import { Linkedin } from "@/assets/icon/Linkedin";
 import { Twitter } from "@/assets/icon/Twitter";
-import { BLogo } from "@/assets/icon/bLogo";
+import { BLogo } from "@/assets/icon/BLogo";
+import Link from "next/link";
+import { useState } from "react";
 
 export const About = () => {
+  const [app] = useState([]);
+  const [Views] = useState([]);
+  const [contacts] = useState([]);
   return (
     <div className="bg-gray-50 w-full h-full pt-[64px] ">
       <div className="mx-4  bg-white mb-0 grid gap-4 md:bg-gray-50 md:flex md:justify-evenly md:gap-4">
@@ -21,9 +26,15 @@ export const About = () => {
         </div>
 
         <div className="flex gap-3 md:grid md:gap-0">
-          <button>Home</button>
-          <button>Blog</button>
-          <button>Contact</button>
+          <Link key={app.id} href={`/`}>
+            <button>Home</button>
+          </Link>
+          <Link key={Views} href={`/blogs`}>
+            <button>Blog</button>
+          </Link>
+          <Link key={contacts.id} href={`/contact/${contacts.id}`}>
+            <button>Contact</button>
+          </Link>
         </div>
         <div className="flex gap-3 mb-4">
           <button>

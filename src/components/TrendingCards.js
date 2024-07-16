@@ -1,10 +1,11 @@
 export const TrendingCards = (props) => {
   return (
-    <div className="w-72  relative md:h-[320px] h-[320px]  ">
-      <img
-        src={props.image}
-        className="w-72 h-[320px] rounded-xl object-cover m   "
-      />
+    <div className="w-72  relative md:h-[380px] h-fit  ">
+        <img
+          src={props.image}
+          className="w-72 h-[320px] md:h-[380px] rounded-xl object-cover md:h-full   "
+        />
+
       <div className="  absolute top-[164px] left-8 ">
         <div className="flex flex-wrap gap-2">
           {props.tag.split(",").map((item) => (
