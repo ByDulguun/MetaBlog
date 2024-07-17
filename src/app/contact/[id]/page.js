@@ -7,7 +7,6 @@ import { Header } from "@/components/Header";
 const { useParams } = require("next/navigation");
 
 const contactBlog = () => {
-  const { id } = useParams();
   return (
     <div>
       <Header />
