@@ -11,8 +11,8 @@ export const About = () => {
   const [Views] = useState([]);
   const [contacts] = useState([]);
   return (
-    <div className="bg-gray-50 w-full h-full pt-[64px] ">
-      <div className="mx-4  bg-white mb-0 grid gap-4 md:bg-gray-50 md:flex md:justify-evenly md:gap-4">
+    <div className="bg-gray-50 md:w-full md:h-full pt-[64px] w-screen ml-2">
+      <div className=" mx-4 bg-white mb-0 grid gap-4 md:bg-gray-50 md:flex md:justify-evenly md:gap-4">
         <div className=" md:grid md:gap-2">
           <h1 className="text-gray-800 font-semibold text-lg ">About</h1>
           <p className="text-gray-500">
@@ -25,7 +25,7 @@ export const About = () => {
           <p>Phone : 880 123 456 789</p>
         </div>
 
-        <div className="flex gap-3 md:grid md:gap-0">
+        <div className="flex gap-3 md:grid md:h-fit md:gap-6">
           <Link key={app.id} href={`/`}>
             <button>Home</button>
           </Link>
@@ -51,12 +51,13 @@ export const About = () => {
           </button>
         </div>
       </div>
+      <div className="md:w-fit md:px-[670px] border m-auto my-8 max-md:w-[340px]"></div>
       <div className="bg-white mx-4 mt-1 pt-10 grid md:flex gap-10 md:bg-gray-50 md:justify-between md:mx-[450px] md:pb-20">
         <div className="flex gap-3 ">
           <div>
             <BLogo />
           </div>
-          <div cla>
+          <div>
             <div className="flex">
               <p>Meta</p>
               <p className="text-gray-800 font-extrabold">Blog</p>

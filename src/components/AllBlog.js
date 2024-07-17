@@ -65,7 +65,7 @@ export const AllBlog = () => {
 
       <button className="w-full grid grid-cols-1 gap-[24px] mx-3 md:grid md:grid-cols-3 md:w-[1200px] md:justify-start ">
         {blogs.map((blog) => (
-          <Link key={blog.id} href={`/blogs/${blog.id}`}>
+          <Link key={blog.id} href={`/blogs/id${blog.id}`}>
             <BlogCard
               key={blog.title}
               image={blog.cover_image}

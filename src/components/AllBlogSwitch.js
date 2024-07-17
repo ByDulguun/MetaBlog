@@ -47,6 +47,7 @@ export const AllBlogSwitch = () => {
               title={blog.title}
               date={blog.publish_at}
               tags={blog.tag_list}
+              name={blog.name}
               readable_publish_date={blog.readable_publish_date}
             />
           </Link>
