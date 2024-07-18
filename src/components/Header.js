@@ -5,6 +5,7 @@ import { Menuicon } from "../assets/icon/Menuicon";
 import { Metabloglogo } from "../assets/icon/Metabloglogo";
 import { Search } from "../assets/icon/Search";
 import { useState } from "react";
+
 import { MenuClose } from "@/assets/icon/MenuClose";
 import { SideBar } from "./SideBar";
 
@@ -14,7 +15,7 @@ export const Header = ({}) => {
   const [contacts] = useState([]);
   const [open, setOpen] = useState(true);
   return (
-    <div className="w-full h-fit mx-2">
+    <div className="w-full h-fit ">
       <div className="relative">
         <div
           className={` bg-gray-100 z-10 h-full w-screen fixed md:absolute md:z-0 md:h-fit px-[15px] duration-150 ${
@@ -30,7 +31,7 @@ export const Header = ({}) => {
           }`}
           onClick={() => setOpen(!open)}
         >
-          <div >{open ? <Menuicon /> : <MenuClose />}</div>
+          <div>{open ? <Menuicon /> : <MenuClose />}</div>
         </div>
       </div>
 
@@ -41,7 +42,7 @@ export const Header = ({}) => {
           </div>
         </Link>
 
-        <div className="md:flex gap-12 hidden  ">
+        <div className="md:flex gap-12 hidden text-[16px] text-gray-600 ">
           <Link key={app.id} href={`/`}>
             <button>Home </button>
           </Link>

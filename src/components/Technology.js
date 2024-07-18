@@ -38,13 +38,13 @@ export const Technology = ({ articles }) => {
 
       <div className="flex justify-center gap-2 mt-4 md:justify-end md:mr-[520px]">
         <button
-          className="border rounded-lg px-3 py-2"
+          className="border border-black rounded-lg px-3 py-2 hover:bg-gray-400 "
           onClick={handleLeftClick}
         >
           <Lefticon />
         </button>
         <button
-          className="border rounded-lg px-3 py-2"
+          className="border border-black rounded-lg px-3 py-2 hover:bg-gray-400 "
           onClick={handleRightClick}
         >
           <Righticon />

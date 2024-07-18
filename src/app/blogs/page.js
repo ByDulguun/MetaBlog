@@ -7,8 +7,7 @@ import { Header } from "@/components/Header";
 const { useParams } = require("next/navigation");
 
 const BlogPage = () => {
-  const { id } = useParams();
-
+  
   return (
     <>
       <Header />

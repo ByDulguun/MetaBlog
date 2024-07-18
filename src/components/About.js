@@ -1,3 +1,5 @@
+"use client";
+
 import { Facebook } from "@/assets/icon/Facebook";
 import { Instagram } from "@/assets/icon/Instagram";
 import { Linkedin } from "@/assets/icon/Linkedin";
@@ -51,7 +53,7 @@ export const About = () => {
           </button>
         </div>
       </div>
-      <div className="md:w-fit md:px-[670px] border m-auto my-8 max-md:w-[340px]"></div>
+      <div className="md:w-fit md:px-[670px] bg-gray-300 h-[1px] m-auto my-8 max-md:w-[340px]"></div>
       <div className="bg-white mx-4 mt-1 pt-10 grid md:flex gap-10 md:bg-gray-50 md:justify-between md:mx-[450px] md:pb-20">
         <div className="flex gap-3 ">
           <div>
@@ -70,7 +72,9 @@ export const About = () => {
 
         <div className="grid justify-start gap-4 md:flex ">
           <button>Terms of Use</button>
+          <div className="w-[1px] h-[40px] bg-gray-100"></div>
           <button>Privacy Policy</button>
+          <div className="w-[1px] h-[40px] bg-gray-100"></div>
           <button>Cookie Policy</button>
         </div>
       </div>
