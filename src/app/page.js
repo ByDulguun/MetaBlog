@@ -20,6 +20,23 @@ const { useParams } = require("next/navigation");
 const Home = () => {
   const { id } = useParams();
   const [articles, setArticles] = useState([]);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await fetch(`http://localhost:3001/`);
+
+        const data = await res.json();
+
+        setData(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getData();
+  }, []);
 
   const getData = async () => {
     const data = await getArticle();
@@ -36,6 +53,11 @@ const Home = () => {
       <Trending articles={articles} />
       <AllBlog articles={articles} />
       <About />
+      {data.map((item) => (
+        <div key={item.title}>
+          <h1>{item.title}</h1>
+        </div>  
+      ))}
     </div>
   );
 };

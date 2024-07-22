@@ -8,12 +8,29 @@ import { useState } from "react";
 
 import { MenuClose } from "@/assets/icon/MenuClose";
 import { SideBar } from "./SideBar";
+import { usePathname } from "next/navigation";
 
 export const Header = ({}) => {
   const [app] = useState([]);
-  const [Views] = useState([]);
-  const [contacts] = useState([]);
   const [open, setOpen] = useState(true);
+  const pathname = usePathname();
+
+  const paths = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Blog",
+      path: "/blogs",
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
+  ];
+  console.log(pathname);
+
   return (
     <div className="w-full h-fit ">
       <div className="relative">
@@ -42,16 +59,18 @@ export const Header = ({}) => {
           </div>
         </Link>
 
-        <div className="md:flex gap-12 hidden text-[16px] text-gray-600 ">
-          <Link key={app.id} href={`/`}>
-            <button>Home </button>
-          </Link>
-          <Link key={Views} href={`/blogs`}>
-            <button>Blog</button>
-          </Link>
-          <Link key={contacts.id} href={`/contact/${contacts.id}`}>
-            <button>Contact</button>
-          </Link>
+        <div className="md:flex gap-12 hidden text-[16px]  text-gray-600 ">
+          {paths.map((path, index) => (
+            <Link key={index} href={path.path}>
+              <div
+                className="text-gray-600"
+                style={{ color: pathname === path.path ? "blue" : "gray-600" }}
+              >
+                {path.name}
+              </div>
+            </Link>
+          ))}
+          
         </div>
         <div className="md:flex hidden ">
           <Search />

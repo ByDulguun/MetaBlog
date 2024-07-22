@@ -70,11 +70,11 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="grid justify-start gap-4 md:flex ">
+        <div className="grid justify-start md:gap-4 md:flex ">
           <button>Terms of Use</button>
-          <div className="w-[1px] h-[40px] bg-gray-100"></div>
+          <div className="w-[1px] h-[40px] bg-gray-200"></div>
           <button>Privacy Policy</button>
-          <div className="w-[1px] h-[40px] bg-gray-100"></div>
+          <div className="w-[1px] h-[40px] bg-gray-200"></div>
           <button>Cookie Policy</button>
         </div>
       </div>

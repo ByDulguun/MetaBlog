@@ -22,10 +22,10 @@ export const BlogCard = ({
               <BlogTag key={tag} tag={tag} />
             ))}
           </div>
-          <h3 className="font-semibold text-2xl">{title}</h3>
+          <h3 className="font-semibold text-2xl ">{title}</h3>
           <p>{name}</p>
           <p className="text-gray-500"> {date}</p>
-          <div className="md:flex md:justify-start">
+          <div className="md:flex  ">
             {readable_publish_date}
           </div>
         </div>
