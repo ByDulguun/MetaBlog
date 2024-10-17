@@ -14,7 +14,7 @@ export const About = () => {
   const [contacts] = useState([]);
   return (
     <div className="bg-gray-50 md:w-full md:h-full pt-[64px] w-screen ml-2">
-      <div className=" mx-4 bg-white mb-0 grid gap-4 md:bg-gray-50 md:flex md:justify-evenly md:gap-4">
+      <div className=" mx-4 bg-white mb-0 grid gap-4 md:bg-gray-50 md:flex md:justify-around md:gap-4">
         <div className=" md:grid md:gap-2">
           <h1 className="text-gray-800 font-semibold text-lg ">About</h1>
           <p className="text-gray-500">

@@ -52,7 +52,7 @@ export const Header = ({}) => {
         </div>
       </div>
 
-      <div className="p-6 md:flex  items-baseline justify-evenly md:mx-[168px] ">
+      <div className="p-6 md:flex  items-baseline justify-around md:mx-[168px] ">
         <Link key={app.id} href={`/`}>
           <div>
             <Metabloglogo />
@@ -70,7 +70,6 @@ export const Header = ({}) => {
               </div>
             </Link>
           ))}
-          
         </div>
         <div className="md:flex hidden ">
           <Search />
